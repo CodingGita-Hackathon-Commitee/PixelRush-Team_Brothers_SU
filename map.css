@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+}
+
+.page {
+    min-height: 100vh;
+}
+
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    background: #111827;
+    color: white;
+    padding: 30px 20px;
+}
+
+.sidebar h1 {
+    font-size: 25px;
+}
+
+.sidebar p {
+    color: #aaa;
+    margin: 8px 0 35px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 14px;
+    color: #ddd;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.sidebar a:hover,
+.sidebar .active {
+    background: #ff6b00;
+    color: white;
+}
+
+.main {
+    margin-left: 250px;
+    padding: 40px;
+}
+
+.main header {
+    margin-bottom: 25px;
+}
+
+.main header p {
+    color: #777;
+    margin-top: 7px;
+}
+
+.map {
+    height: 500px;
+    background: #dce8d6;
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.road {
+    position: absolute;
+    background: white;
+}
+
+.r1 {
+    width: 120%;
+    height: 60px;
+    top: 130px;
+    transform: rotate(15deg);
+}
+
+.r2 {
+    width: 120%;
+    height: 60px;
+    top: 340px;
+    transform: rotate(-12deg);
+}
+
+.r3 {
+    width: 60px;
+    height: 120%;
+    left: 50%;
+    top: -50px;
+    transform: rotate(15deg);
+}
+
+.marker,
+.location {
+    position: absolute;
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #aaa;
+    font-size: 25px;
+}
+
+.marker span,
+.location span {
+    font-size: 13px;
+    display: block;
+    margin-top: 5px;
+}
+
+.m1 {
+    top: 80px;
+    left: 20%;
+}
+
+.m2 {
+    top: 240px;
+    right: 20%;
+}
+
+.m3 {
+    bottom: 50px;
+    left: 48%;
+}
+
+.location {
+    top: 230px;
+    left: 48%;
+    color: #1267d6;
+}
+
+.truck-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.truck-list div {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.truck-list p {
+    color: #777;
+    margin: 10px 0 15px;
+}
+
+.truck-list a {
+    background: #ff6b00;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 7px;
+    display: inline-block;
+}
+
+@media(max-width: 800px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .truck-list {
+        grid-template-columns: 1fr;
+    }
+}
