@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header p {
+    color: #aaa;
+    margin-top: 6px;
+}
+
+header a {
+    color: white;
+    background: #ff6b00;
+    padding: 12px 18px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px;
+}
+
+.cart-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.items h2 {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.cart-item img {
+    width: 130px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.details {
+    flex: 1;
+}
+
+.details p {
+    color: #777;
+    margin: 8px 0;
+}
+
+.details strong {
+    color: #ff6b00;
+    font-size: 20px;
+}
+
+.quantity {
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.summary {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    height: fit-content;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.summary h2 {
+    margin-bottom: 20px;
+}
+
+.summary > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.total {
+    font-size: 21px;
+    color: #ff6b00;
+}
+
+.summary hr {
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.summary > a {
+    display: block;
+    background: #ff6b00;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+@media(max-width: 800px) {
+
+    .cart-layout {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    header {
+        padding: 25px;
+    }
+}
